@@ -1,0 +1,20 @@
+{
+  "manufacturer": "Apple",
+  "model": "iPhone 11",
+  "bands": {
+    "2g": ["900 MHz"],
+    "3g": ["900 MHz", "2100 MHz"],
+    "4g": ["800 MHz"],
+    "5g": ["n1", "n3", "n5"]
+  },
+  "weight": "194 g",
+  "description": "Flagship phone from Apple from 2019.",
+  "sub_model_specification": {
+    "processor": "Processor 7",
+    "RAM": "4 GB",
+    "video_chip": "Video Chip G",
+    "screen_resolution": "828 x 1792 pixels",
+    "screen_size": "6.1 inches",
+    "battery_size": "3110 mAh"
+  }
+}

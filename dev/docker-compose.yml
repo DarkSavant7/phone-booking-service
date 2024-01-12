@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    container_name: phone-booking-service-postgres
+    environment:
+      POSTGRES_DB: phone_booking_service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "35432:5432"
+    user: postgres
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 1s
+      timeout: 1s
+      retries: 5
+  wiremock:
+    image: rodolpheche/wiremock
+    container_name: phone-booking-service-mocks
+    ports:
+      - "8035:8080"
+    volumes:
+      - ./wiremock/stubs/__files/:/home/wiremock/__files/
+      - ./wiremock/stubs/mappings/:/home/wiremock/mappings/
+    command:
+      - -verbose
+      - -global-response-templating
+  redis:
+    image: "redis"
+    container_name: phone-booking-service-redis
+    ports:
+      - "6379:6379"

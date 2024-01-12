@@ -1,0 +1,20 @@
+{
+  "manufacturer": "Apple",
+  "model": "iPhone X",
+  "bands": {
+    "2g": ["850 MHz", "900 MHz"],
+    "3g": ["900 MHz", "1900 MHz"],
+    "4g": ["700 MHz", "800 MHz", "2600 MHz"],
+    "5g": ["n2", "n4", "n5"]
+  },
+  "weight": "174 g",
+  "description": "The iPhone X marked a turning point in iPhone design.",
+  "sub_model_specification": {
+    "processor": "Processor 8",
+    "RAM": "3 GB",
+    "video_chip": "Video Chip H",
+    "screen_resolution": "1125 x 2436 pixels",
+    "screen_size": "5.8 inches",
+    "battery_size": "2716 mAh"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "manufacturer": "Motorola",
+  "model": "Nexus 6",
+  "bands": {
+    "2g": ["900 MHz"],
+    "3g": ["850 MHz", "2100 MHz"],
+    "4g": [ "800 MHz", "2600 MHz"],
+    "5g": ["n2", "n7"]
+  },
+  "weight": "184 g",
+  "description": "A mid-range phone from Motorola with Nexus branding.",
+  "sub_model_specification": {
+    "processor": "Processor 3",
+    "RAM": "2 GB",
+    "video_chip": "Video Chip C",
+    "screen_resolution": "720 x 1280 pixels",
+    "screen_size": "6.0 inches",
+    "battery_size": "3220 mAh"
+  }
+}

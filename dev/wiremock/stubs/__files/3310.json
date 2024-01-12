@@ -1,0 +1,20 @@
+{
+  "manufacturer": "Nokia",
+  "model": "3310",
+  "bands": {
+    "2g": ["900 MHz"],
+    "3g": [],
+    "4g": [],
+    "5g": []
+  },
+  "weight": "133 g",
+  "description": "An iconic mobile phone renowned for its durability.",
+  "sub_model_specification": {
+    "processor": "Processor 9",
+    "RAM": "16 MB",
+    "video_chip": "Video Chip I",
+    "screen_resolution": "84 x 48 pixels",
+    "screen_size": "1.5 inches",
+    "battery_size": "1200 mAh"
+  }
+}

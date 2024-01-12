@@ -1,0 +1,20 @@
+{
+  "manufacturer": "Apple",
+  "model": "iPhone 12",
+  "bands": {
+    "2g": ["850 MHz"],
+    "3g": ["850 MHz"],
+    "4g": ["800 MHz"],
+    "5g": ["n1", "n2"]
+  },
+  "weight": "164 g",
+  "description": "The iPhone 12 delivers superior performance.",
+  "sub_model_specification": {
+    "processor": "Processor 6",
+    "RAM": "4 GB",
+    "video_chip": "Video Chip F",
+    "screen_resolution": "1170 x 2532 pixels",
+    "screen_size": "6.1 inches",
+    "battery_size": "2815 mAh"
+  }
+}

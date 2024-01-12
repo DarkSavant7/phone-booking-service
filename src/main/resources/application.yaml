@@ -1,0 +1,30 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:35432/phone_booking_service
+    username: postgres
+    password: postgres
+  flyway:
+    encoding: UTF-8
+    create-schemas: true
+    schemas: phone_booking_service
+springdoc:
+  webjars:
+    prefix:
+  swagger-ui:
+    path: /booking/v3/swagger-ui.html
+    disable-swagger-default-url: true
+    enabled: true
+    operationsSorter: alpha
+    tagsSorter: alpha
+    doc-expansion: none
+  api-docs:
+    enabled: true
+    path: /booking/v3/api-docs
+app:
+  detailsService:
+    host: "localhost:8035"
+    url: "/phones?"

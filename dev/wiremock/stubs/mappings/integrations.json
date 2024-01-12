@@ -1,0 +1,191 @@
+[
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Samsung"
+        },
+        "model": {
+          "equalTo": "Galaxy_s8"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "s8.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Samsung"
+        },
+        "model": {
+          "equalTo": "Galaxy_s9"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "s9.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Motorola"
+        },
+        "model": {
+          "equalTo": "Nexus_6"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "nexus6.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Oneplus"
+        },
+        "model": {
+          "equalTo": "9"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "oneplus9.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Apple"
+        },
+        "model": {
+          "equalTo": "iPhone_13"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "iPhone_13.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Apple"
+        },
+        "model": {
+          "equalTo": "iPhone_12"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "iPhone_12.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Apple"
+        },
+        "model": {
+          "equalTo": "iPhone_11"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "iPhone_11.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Apple"
+        },
+        "model": {
+          "equalTo": "iPhone_X"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "iPhone_X.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  },
+  {
+    "request": {
+      "method": "GET",
+      "urlPath": "/phones",
+      "queryParameters": {
+        "manufacturer": {
+          "equalTo": "Nokia"
+        },
+        "model": {
+          "equalTo": "3310"
+        }
+      }
+    },
+    "response": {
+      "status": 200,
+      "bodyFileName": "3310.json",
+      "headers": {
+        "Content-Type": "application/json"
+      }
+    }
+  }
+]

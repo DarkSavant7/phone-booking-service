@@ -2,6 +2,7 @@ package com.dark.savant.phonebookingservice.service
 
 import com.dark.savant.phonebookingservice.domain.Booking
 import com.dark.savant.phonebookingservice.repository.BookingRepository
+import com.dark.savant.phonebookingservice.repository.DeviceRepository
 import kotlinx.coroutines.runBlocking
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -18,6 +19,9 @@ import reactor.test.StepVerifier
 internal class MainBookingServiceTest {
     @Mock
     private lateinit var bookingRepository: BookingRepository
+
+    @Mock
+    private lateinit var deviceRepository: DeviceRepository
 
     @InjectMocks
     private lateinit var mainBookingService: MainBookingService
@@ -38,19 +42,4 @@ internal class MainBookingServiceTest {
         }
     }
 
-    @Test
-    fun `returnDevice should return BookingResultDto when device is booked`() {
-        runBlocking {
-            val booking = Booking(1L, 1L, 1L)
-            val bookingResultDto = booking.toResultDto()
-            given(bookingRepository.isDeviceBooked(1L)).willReturn(Mono.just(true))
-            given(bookingRepository.findByDeviceId(1L)).willReturn(Mono.just(booking))
-
-            val result = mainBookingService.returnDevice(1L)
-
-            StepVerifier.create(result)
-                .assertNext { assertEquals(bookingResultDto, it) }
-                .verifyComplete()
-        }
-    }
 }

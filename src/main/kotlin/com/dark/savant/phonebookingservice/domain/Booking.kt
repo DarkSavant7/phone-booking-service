@@ -18,12 +18,11 @@ data class Booking(
     @LastModifiedDate
     var updated: LocalDateTime = LocalDateTime.now()
 ) {
-    fun toResultDto(): BookingResultDto {
-        return BookingResultDto(
-            id = this.id,
-            deviceId = this.deviceId,
-            bookedById = this.userId,
-            startTime = this.created
-        )
-    }
+    fun toResultDto(): BookingResultDto = BookingResultDto(
+        id = this.id,
+        deviceId = this.deviceId,
+        bookedById = this.userId,
+        startTime = this.created
+    )
+
 }

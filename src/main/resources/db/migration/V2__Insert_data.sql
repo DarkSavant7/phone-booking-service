@@ -6,7 +6,8 @@ VALUES ('USER');
 
 -- USERS
 INSERT INTO users (login, password, email)
-VALUES ('admin', '$2a$12$vDxDrs8LygQnOMRrTWCThuaA0s7EnfFkXuK3wdwjKjREknl6gVtQW', 'admin@example.com'); -- password: 12345678
+VALUES ('admin', '$2a$12$vDxDrs8LygQnOMRrTWCThuaA0s7EnfFkXuK3wdwjKjREknl6gVtQW',
+        'admin@example.com'); -- password: 12345678
 INSERT INTO users (login, password, email)
 VALUES ('user', '$2a$12$vDxDrs8LygQnOMRrTWCThuaA0s7EnfFkXuK3wdwjKjREknl6gVtQW', 'user@example.com');
 -- password: 12345678

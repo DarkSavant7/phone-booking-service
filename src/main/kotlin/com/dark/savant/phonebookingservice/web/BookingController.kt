@@ -20,4 +20,12 @@ class BookingController(private val bookingService: BookingService) : BookingApi
     override suspend fun returnDevice(@PathVariable deviceId: Long): Mono<BookingResultDto> {
         return bookingService.returnDevice(deviceId)
     }
+
+    override suspend fun bookDeviceByName(
+        deviceModel: String,
+        deviceManufacturer: String,
+        userId: Long
+    ): Mono<BookingResultDto> {
+        return bookingService.bookDeviceByName(deviceModel, deviceManufacturer, userId)
+    }
 }

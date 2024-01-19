@@ -16,6 +16,13 @@ interface BookingService {
      */
     suspend fun bookDevice(deviceId: Long, userId: Long): Mono<BookingResultDto>
 
+
+    suspend fun bookDeviceByName(
+        deviceModel: String,
+        deviceManufacturer: String,
+        userId: Long
+    ): Mono<BookingResultDto>
+
     /**
      * Returns a Mono emitting an instance of BookingResultDto representing the booking result for the device with the given ID.
      *
@@ -23,4 +30,5 @@ interface BookingService {
      * @return A Mono emitting an instance of BookingResultDto representing the booking result.
      */
     suspend fun returnDevice(deviceId: Long): Mono<BookingResultDto>
+
 }

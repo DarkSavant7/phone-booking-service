@@ -57,6 +57,7 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:postgresql")
     testImplementation("org.testcontainers:r2dbc")
+    testImplementation ("org.mockito.kotlin:mockito-kotlin:5.2.1")
 }
 
 dependencyManagement {

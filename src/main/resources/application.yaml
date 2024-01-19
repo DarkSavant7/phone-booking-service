@@ -29,5 +29,5 @@ springdoc:
     path: /booking/v3/api-docs
 app:
   detailsService:
-    host: "localhost:8035"
+    host: "http://localhost:8035"
     url: "/phones?"

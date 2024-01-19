@@ -1,5 +1,6 @@
 package com.dark.savant.phonebookingservice.dto.details
 
+import com.fasterxml.jackson.annotation.JsonProperty
 import io.swagger.v3.oas.annotations.media.Schema
 
 @Schema(description = "Details about the phone device")
@@ -20,5 +21,6 @@ data class DeviceDetails(
     val description: String,
 
     @Schema(description = "Sub-Model specification of the device")
+    @JsonProperty("sub_model_specification")
     val subModelSpecification: SubModelSpecification
 )

@@ -56,5 +56,5 @@ interface BookingRepository : ReactiveCrudRepository<Booking, Long> {
     )
     fun getBookingDtoById(id: Long): Mono<BookingDto>
 
-    fun findByDeviceId(deviceId: Long): Mono<Booking>
+    fun findOneByDeviceIdOrderByEndTimeDesc(deviceId: Long): Mono<Booking>
 }

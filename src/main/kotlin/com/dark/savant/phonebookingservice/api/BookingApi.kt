@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses
 import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.PutMapping
+import org.springframework.web.bind.annotation.RequestParam
 import reactor.core.publisher.Mono
 
 /**
@@ -52,4 +53,12 @@ interface BookingApi {
     )
     @PutMapping("/bookings/{deviceId}")
     suspend fun returnDevice(@PathVariable deviceId: Long): Mono<BookingResultDto>
+
+
+    @PostMapping("/bookings/{userId}")
+    suspend fun bookDeviceByName(
+        @RequestParam("deviceModel") deviceModel: String,
+        @RequestParam("deviceManufacturer") deviceManufacturer: String,
+        @PathVariable("userId") userId: Long
+    ): Mono<BookingResultDto>
 }

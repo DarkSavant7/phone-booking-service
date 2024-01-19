@@ -11,11 +11,11 @@ import reactor.core.publisher.Flux
 interface DeviceRepository : ReactiveCrudRepository<Device, Long> {
     @Query(
         """
-        SELECT id AS id, manufacturer AS manufacturer, model AS model
-        FROM devices;
+        SELECT d.id AS id, d.manufacturer AS manufacturer, d.model AS model
+        FROM devices d
     """
     )
-    suspend fun findAllDevicesDto(): Flux<DeviceDto>
+    fun findAllDevicesDto(): Flux<DeviceDto>
 
     @Query(
         """
@@ -29,5 +29,5 @@ interface DeviceRepository : ReactiveCrudRepository<Device, Long> {
 );
     """
     )
-    suspend fun findAllAvailableDevicesDto(): Flux<DeviceDto>
+    fun findAllAvailableDevicesDto(): Flux<DeviceDto>
 }

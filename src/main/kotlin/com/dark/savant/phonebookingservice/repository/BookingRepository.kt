@@ -22,20 +22,20 @@ interface BookingRepository : ReactiveCrudRepository<Booking, Long> {
         ) AS hasActiveBooking;
     """
     )
-    suspend fun isDeviceBooked(@Param("device_id") deviceId: Long): Mono<Boolean>
+    fun isDeviceBooked(@Param("device_id") deviceId: Long): Mono<Boolean>
 
     @Query(
         """
         UPDATE bookings
-        SET end_time = :end_time, updated = :end_
-        WHERE device_id = :deviceId
+        SET end_time = :end_date_time, updated = :end_date_time
+        WHERE device_id = :device_id
           AND end_time IS NULL;
     """
     )
     fun returnDevice(
         @Param("device_id") deviceId: Long,
-        @Param("end_time") endTime: LocalDateTime
-    )
+        @Param("end_date_time") endTime: LocalDateTime
+    ): Mono<Unit>
 
     @Query(
         """
@@ -54,7 +54,7 @@ interface BookingRepository : ReactiveCrudRepository<Booking, Long> {
         WHERE b.id = :bookingId;
     """
     )
-    suspend fun getBookingDtoById(id: Long): Mono<BookingDto>
+    fun getBookingDtoById(id: Long): Mono<BookingDto>
 
     fun findByDeviceId(deviceId: Long): Mono<Booking>
 }

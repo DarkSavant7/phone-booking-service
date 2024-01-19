@@ -4,10 +4,13 @@ server:
     context-path: /
 spring:
   r2dbc:
-    url: r2dbc:postgresql://localhost:35432/phone_booking_service
+    url: r2dbc:postgresql://localhost:35432/phone_booking_service?currentSchema=phone_booking_service
     username: postgres
     password: postgres
   flyway:
+    url: jdbc:postgresql://localhost:35432/phone_booking_service?currentSchema=phone_booking_service
+    user: ${spring.r2dbc.username}
+    password: ${spring.r2dbc.password}
     encoding: UTF-8
     create-schemas: true
     schemas: phone_booking_service
